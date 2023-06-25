@@ -8,9 +8,16 @@ import java.util.List;
 public class Produto  {
     private String nome;
     private String marca;
-    private double valor;
+    protected double valor;
     private Tamanho tamanho;
-    private List<String> itensInclusos;
+    private List<ItemIncluso> itensInclusos;
+
+
+    // Construtores
+    public Produto(String marcaInicial, Tamanho tamanhoInicial){
+        this.marca = marcaInicial;
+        this.tamanho = tamanhoInicial;
+    }
 
     // Nome
     public String getNome() {
@@ -53,11 +60,11 @@ public class Produto  {
     }
 
     // Itens Inclusos
-    public List<String> getItensInclusos() {
-        return this.itensInclusos;
+    public List<ItemIncluso> getItensInclusos() {
+        return itensInclusos;
     }
 
-    public void setItensInclusos(List<String> novosItensInclusos) {
+    public void setItensInclusos(List<ItemIncluso> novosItensInclusos) {
         this.itensInclusos = novosItensInclusos;
     }
 }
