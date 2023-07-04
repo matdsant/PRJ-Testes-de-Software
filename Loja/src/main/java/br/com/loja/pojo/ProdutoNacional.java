@@ -3,6 +3,7 @@ package br.com.loja.pojo;
 import br.com.loja.enums.Tamanho;
 import br.com.loja.interfaces.Favorito;
 
+// Abaixo temos um exemplo de Herança, com o uso de Extends
 public class ProdutoNacional extends Produto implements Favorito {
 
     private double impostoNacional;

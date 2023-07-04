@@ -8,6 +8,13 @@ import java.util.List;
 public class Produto  {
     private String nome;
     private String marca;
+
+    // Encapsulamento
+    // 1. Atributo deve ser privado, "Protected" ou "Private"
+    // 2. Criar um método para capturar o valor que está dentro dele
+    // 3. Criar um método para adicionar o valor que está dentro dele
+    // O privado do atributo é privado apenas para outras classes,
+    // mas na própria classe é possível alterar os atributos;
     protected double valor;
     private Tamanho tamanho;
     private List<ItemIncluso> itensInclusos;
@@ -38,10 +45,12 @@ public class Produto  {
     }
 
     // Valor
+    // Encapsulamento, criar o método para ser acessado
     public double getValor(){
         return this.valor;
     }
 
+    // Parâmetro "double novoValor"
     public void setValor(double novoValor){
         if (novoValor > 0) {
             this.valor = novoValor;
